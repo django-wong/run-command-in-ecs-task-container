@@ -1,0 +1,21 @@
+{
+  "name": "run-command-in-ecs-task-container",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "package": "ncc build ./index.ts"
+  },
+  "keywords": [],
+  "author": "django-wong",
+  "license": "ISC",
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^5.0.0",
+    "aws-sdk": "^2.1046.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.33.0",
+    "typescript": "^4.5.4"
+  }
+}

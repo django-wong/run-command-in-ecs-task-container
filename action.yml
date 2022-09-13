@@ -1,0 +1,32 @@
+name: "Run command in a specified container"
+description: "Run command in a container of a ECS task"
+branding:
+  icon: "cloud"
+  color: "orange"
+inputs:
+  task-definition-family:
+    description: "Task definition family name"
+    required: true
+  container:
+    description: "Container name"
+    required: true
+  cluster:
+    required: true
+    description: "The cluster name"
+  launch-type:
+    description: "The launch type on which to run your task. Defaults to EC2"
+    required: false
+  command:
+    description: "Command to run"
+    required: true
+  wait-for-task-stopped:
+    description: "Wait for the task to be stopped"
+    required: false
+    default: "true"
+  wait-for-minutes:
+    description: "Wait for the task to be stopped"
+    required: false
+    default: "15"
+runs:
+  using: node16
+  main: "dist/index.js"
